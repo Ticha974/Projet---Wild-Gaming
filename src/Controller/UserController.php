@@ -25,7 +25,7 @@ class UserController extends AbstractController
                     $_SESSION['userId'] = $id;
                     $admin = $user['isAdmin'];
                     if (password_verify($_POST['password'], $user['password'])) {
-                        header("Location: /");
+                        header('Location: /');
                     } else {
                         $errors = 'Please enter valid password';
                     }

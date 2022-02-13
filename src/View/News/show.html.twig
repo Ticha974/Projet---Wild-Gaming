@@ -13,6 +13,7 @@
             overflow: hidden;
             word-wrap: break-word;
             text-align: left;
+            text-transform: none;
         }
         #username{
             margin: 0px !important;
@@ -55,10 +56,6 @@
 
         {% if (comments) %}
             <div class="offset-2 " style="max-width: 100%;padding: 5px; display: flex; margin: auto; margin-top: 200px;">
-                <div class="card-header" style="border-bottom: 1px solid beige;">
-                    User Comments
-                </div>
-
                 <div class="card-body container">
                     {% for item in comments %}
                         <div class="row">
@@ -69,15 +66,13 @@
                         <div class="col-lg-12">-->
                         <div class="row">
                         <p class="card-text" id="comment">{{ item.comment }}</p></div>
+                        <hr>
                         <!--</div>-->
                     {% endfor %}
                 </div>
             </div>
             {% else %}
                 <div class="card-body offset-2 container" style="max-width: 100%;padding: 5px; display: flex; margin: auto; margin-top: 200px;">
-                    <div class="card-header header" style="border-bottom: 1px solid beige;">
-                        User Comments
-                    </div>
                     <div class="card-body ">
                         No comments yet.
                     </div>
